@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Artist - You Celebrate, We Elevate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+        }
+        .artist-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-poppins">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FF8C42'/><path d='M35 30 L65 70 M35 70 L65 30' stroke='black' stroke-width='8'/></svg>" class="w-12 h-12" alt="Logo">
+                <span class="text-[#FF8C42] font-playfair text-2xl font-bold">Find My Artist</span>
+            </div>
+            <div class="hidden md:flex gap-8">
+                <a href="#" class="hover:text-[#FF8C42]">Home</a>
+                <a href="#artists" class="hover:text-[#FF8C42]">Artists</a>
+                <a href="#categories" class="hover:text-[#FF8C42]">Categories</a>
+                <a href="#contact" class="hover:text-[#FF8C42]">Contact</a>
+            </div>
+            <button class="md:hidden"><i class="bi bi-list text-2xl"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="h-screen relative gradient-bg">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80')] bg-cover bg-center mix-blend-overlay"></div>
+        <div class="container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+            <h1 class="font-playfair text-4xl md:text-6xl font-bold mb-4">Find My Artist</h1>
+            <p class="text-xl md:text-2xl text-[#FF8C42] mb-8">You Celebrate, We Elevate</p>
+            <div class="flex flex-col md:flex-row gap-4 w-full max-w-2xl">
+                <input type="text" placeholder="What kind of artist are you looking for?" class="flex-1 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 focus:outline-none focus:border-[#FF8C42]">
+                <button class="px-8 py-3 rounded-full bg-[#FF8C42] hover:bg-[#FF8C42]/80 transition-colors">
+                    Search Artists
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories -->
+    <section id="categories" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="font-playfair text-3xl md:text-4xl text-center mb-12">Popular Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="category-card text-center p-6 rounded-lg bg-zinc-900 hover:bg-zinc-800 transition-colors cursor-pointer">
+                    <i class="bi bi-music-note-beamed text-4xl text-[#FF8C42] mb-4"></i>
+                    <h3>Musicians</h3>
+                </div>
+                <div class="category-card text-center p-6 rounded-lg bg-zinc-900 hover:bg-zinc-800 transition-colors cursor-pointer">
+                    <i class="bi bi-brush text-4xl text-[#FF8C42] mb-4"></i>
+                    <h3>Painters</h3>
+                </div>
+                <div class="category-card text-center p-6 rounded-lg bg-zinc-900 hover:bg-zinc-800 transition-colors cursor-pointer">
+                    <i class="bi bi-camera text-4xl text-[#FF8C42] mb-4"></i>
+                    <h3>Photographers</h3>
+                </div>
+                <div class="category-card text-center p-6 rounded-lg bg-zinc-900 hover:bg-zinc-800 transition-colors cursor-pointer">
+                    <i class="bi bi-people text-4xl text-[#FF8C42] mb-4"></i>
+                    <h3>Dancers</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section id="artists" class="py-20 bg-zinc-900">
+        <div class="container mx-auto px-4">
+            <h2 class="font-playfair text-3xl md:text-4xl text-center mb-12">Featured Artists</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="artist-card bg-black rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&q=80" class="w-full h-60 object-cover" alt="Artist">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sarah Johnson</h3>
+                        <p class="text-gray-400 mb-4">Classical Violinist</p>
+                        <button class="w-full py-2 rounded bg-[#FF8C42] hover:bg-[#FF8C42]/80 transition-colors">Book Now</button>
+                    </div>
+                </div>
+                <div class="artist-card bg-black rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1552933529-e359b2477252?auto=format&fit=crop&q=80" class="w-full h-60 object-cover" alt="Artist">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Michael Chen</h3>
+                        <p class="text-gray-400 mb-4">Jazz Pianist</p>
+                        <button class="w-full py-2 rounded bg-[#FF8C42] hover:bg-[#FF8C42]/80 transition-colors">Book Now</button>
+                    </div>
+                </div>
+                <div class="artist-card bg-black rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&q=80" class="w-full h-60 object-cover" alt="Artist">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Emma Davis</h3>
+                        <p class="text-gray-400 mb-4">Contemporary Dancer</p>
+                        <button class="w-full py-2 rounded bg-[#FF8C42] hover:bg-[#FF8C42]/80 transition-colors">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="font-playfair text-3xl md:text-4xl mb-8">Get in Touch</h2>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Your Name" class="w-full px-6 py-3 rounded-lg bg-zinc-900 border border-zinc-800 focus:outline-none focus:border-[#FF8C42]">
+                    <input type="email" placeholder="Your Email" class="w-full px-6 py-3 rounded-lg bg-zinc-900 border border-zinc-800 focus:outline-none focus:border-[#FF8C42]">
+                    <textarea placeholder="Your Message" rows="5" class="w-full px-6 py-3 rounded-lg bg-zinc-900 border border-zinc-800 focus:outline-none focus:border-[#FF8C42]"></textarea>
+                    <button class="w-full py-3 rounded-lg bg-[#FF8C42] hover:bg-[#FF8C42]/80 transition-colors">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-zinc-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2023 Find My Artist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const nav = document.querySelector('nav div div:nth-child(2)');
+        
+        menuButton.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('p-4');
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
